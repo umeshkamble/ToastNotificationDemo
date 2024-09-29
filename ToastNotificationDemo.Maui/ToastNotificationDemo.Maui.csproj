@@ -53,4 +53,10 @@
 	  <PackageReference Include="Serilog.Sinks.File" Version="6.0.0" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <MauiXaml Update="DetailPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+
 </Project>

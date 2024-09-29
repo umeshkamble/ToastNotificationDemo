@@ -25,6 +25,14 @@ public partial class MainPage : ContentPage
         // This is needed for the Demo project since I'm using DisplayAlert to show Popups, 
         // leting the user know what happened with the Toast.
         GetWinUIApp().ShowPopup += Popup;
+        GetWinUIApp().NavigationToAnotherPage += async (message) =>
+        {
+            await Application.Current.Dispatcher.DispatchAsync(async () =>
+             {
+
+                 await Shell.Current.GoToAsync($"{nameof(DetailPage)}?Message=User input {message}");
+             });
+        };
 
         BasicToastBtn.Clicked += (sender, args) =>
         {

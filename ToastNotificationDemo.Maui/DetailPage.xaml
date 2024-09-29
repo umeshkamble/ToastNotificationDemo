@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ToastNotificationDemo.Maui.DetailPage"
+             Title="DetailPage">
+    <VerticalStackLayout Spacing="20" VerticalOptions="Center">
+        <Label 
+            Text="Welcome to Detail Page"
+            FontAttributes="Bold"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Label Text="{Binding Message}"
+               FontAttributes="Bold"
+               VerticalOptions="Center"
+               HorizontalOptions="Center"/>
+    </VerticalStackLayout>
+</ContentPage>

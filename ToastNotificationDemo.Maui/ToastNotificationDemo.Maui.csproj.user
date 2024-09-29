@@ -10,6 +10,11 @@
     <PackageOptionalProjectsInIdeBuilds>False</PackageOptionalProjectsInIdeBuilds>
   </PropertyGroup>
   <ItemGroup>
+    <MauiXaml Update="DetailPage.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+  </ItemGroup>
+  <ItemGroup>
     <None Update="Platforms\Windows\Package.appxmanifest">
       <SubType>Designer</SubType>
     </None>

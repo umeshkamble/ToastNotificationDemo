@@ -22,6 +22,8 @@ public partial class App : MauiWinUIApplication
 {
     public Action<string> ShowPopup { get; set; }
 
+    public Action<string> NavigationToAnotherPage { get; set; } 
+
     /// <summary>
     /// Initializes the singleton application object.  This is the first line of authored code
     /// executed, and as such is the logical equivalent of main() or WinMain().
@@ -83,6 +85,7 @@ public partial class App : MauiWinUIApplication
             Log.Information($"Key:  {item.Key} : value  {item.Value}");
         }
         ShowPopup?.Invoke(args?.Arguments.Values.FirstOrDefault());
+        NavigationToAnotherPage?.Invoke(args?.Arguments.Values.FirstOrDefault());
     }
 
     /// <summary>
